@@ -84,7 +84,7 @@ function App() {
               <div class="timeline-marker"></div>
               <div class="timeline-content">
                 <h3>Web Application Developer</h3>
-                <p class="period">2022年1月 - 2023年12月</p>
+                <p class="period">Apl 2020 - Dec 2024</p>
                 <p class="role">Full Stack</p>
               </div>
             </div>
@@ -93,7 +93,7 @@ function App() {
               <div class="timeline-marker"></div>
               <div class="timeline-content">
                 <h3>Intern</h3>
-                <p class="period">2021年7月 - 2021年9月</p>
+                <p class="period">Jan 2019 - Mar 2021</p>
                 <p class="role">Back End</p>
               </div>
             </div>
