@@ -70,7 +70,102 @@ function App() {
         )}
       </header>
 
-      <main></main>
+      <main>
+        <section class="profile">
+          <div class="profile-image"></div>
+          <h1>FUMIYA OTAKE</h1>
+          <p>It is a full stack developer's portfolio site</p>
+        </section>
+
+        <section class="experience">
+          <h2>Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3>Web Application Developer</h3>
+                <p class="period">2022年1月 - 2023年12月</p>
+                <p class="role">Full Stack</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3>Intern</h3>
+                <p class="period">2021年7月 - 2021年9月</p>
+                <p class="role">Back End</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="tech-stack">
+          <h2>My Tech Stack</h2>
+          <div class="stack-container">
+            <div class="stack-section">
+              <div class="stack-icon"></div>
+              <h3>Back-end</h3>
+              <div class="skills">
+                <span class="skill"></span>
+                <span class="skill"></span>
+                <span class="skill"></span>
+                <span class="skill"></span>
+                <span class="skill"></span>
+                <span class="skill"></span>
+              </div>
+            </div>
+
+            <div class="stack-section">
+              <div class="stack-icon"></div>
+              <h3>Front-end</h3>
+              <div class="skills">
+                <span class="skill"></span>
+                <span class="skill"></span>
+                <span class="skill"></span>
+                <span class="skill"></span>
+                <span class="skill"></span>
+                <span class="skill"></span>
+              </div>
+            </div>
+
+            <div class="stack-section">
+              <div class="stack-icon"></div>
+              <h3>DevOps</h3>
+              <div class="skills">
+                <span class="skill"></span>
+                <span class="skill"></span>
+                <span class="skill"></span>
+                <span class="skill"></span>
+                <span class="skill"></span>
+                <span class="skill"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="projects">
+          <h2>Projects</h2>
+          <div class="project-card"></div>
+          <div class="project-card"></div>
+        </section>
+
+        <section class="contact">
+          <h2>Contact</h2>
+          <button class="email-btn">Email</button>
+          <div class="social-links">
+            <a href="#" class="social-link">
+              GitHub
+            </a>
+            <a href="#" class="social-link">
+              LinkedIn
+            </a>
+            <a href="#" class="social-link">
+              X
+            </a>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

@@ -1,6 +1,24 @@
 $background-color: #d1d5db;
 $text-color: #000000;
 $menu-item-spacing: 1.5rem;
+$section-spacing: 2rem;
+$border-color: #333;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin placeholder-block {
+  background-color: #444;
+  border-radius: 4px;
+}
 
 * {
   margin: 0;
@@ -92,4 +110,183 @@ body {
 main {
   flex: 1;
   padding: 1rem;
+
+  section {
+    padding: 1rem;
+    @include flex-column;
+    width: 100%;
+    border-bottom: 1px solid rgba(134, 134, 134, 0.1);
+    padding-bottom: $section-spacing;
+  }
+}
+
+.profile {
+  @include flex-column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    @include placeholder-block;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
+
+// Projects Section
+.projects {
+  .project-card {
+    @include placeholder-block;
+    height: 120px;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+// Tech Stack Section
+.tech-stack {
+  .stack-container {
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    padding: 1rem;
+
+    .stack-section {
+      margin-bottom: 1.5rem;
+
+      .stack-icon {
+        @include placeholder-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 0 auto 0.5rem;
+      }
+
+      h3 {
+        text-align: center;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+
+        .skill {
+          @include placeholder-block;
+          height: 8px;
+          width: 40px;
+        }
+      }
+    }
+  }
+}
+
+// Experience Section
+.experience {
+  .timeline {
+    padding-left: 1.5rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      background-color: $border-color;
+      top: 0;
+      bottom: 0;
+      left: 5px;
+    }
+
+    .timeline-item {
+      margin-bottom: 1.5rem;
+      position: relative;
+
+      .timeline-marker {
+        position: absolute;
+        left: -1.5rem;
+        top: 5px;
+        width: 10px;
+        height: 10px;
+        background-color: $text-color;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .timeline-content {
+        h3 {
+          font-size: 1rem;
+          margin-bottom: 0.25rem;
+        }
+
+        .company,
+        .period,
+        .role {
+          font-size: 0.8rem;
+          margin-bottom: 0.25rem;
+        }
+
+        .role {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// Contact Section
+.contact {
+  @include flex-column;
+  align-items: center;
+
+  .email-btn {
+    @include placeholder-block;
+    color: $text-color;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    width: 80%;
+    text-align: center;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+
+    .social-link {
+      font-size: 0.9rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile .profile-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .contact .email-btn {
+    width: 90%;
+  }
 }
