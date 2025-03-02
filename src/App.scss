@@ -241,9 +241,19 @@ main {
 }
 
 .experience {
+  align-items: center;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
   .timeline {
     padding-left: 1.5rem;
     position: relative;
+    margin-bottom: 2rem;
 
     &::after {
       content: "";
@@ -272,7 +282,7 @@ main {
 
       .timeline-content {
         h3 {
-          font-size: 1rem;
+          font-size: 1.2rem;
           margin-bottom: 0.25rem;
         }
 
@@ -287,6 +297,40 @@ main {
           font-weight: bold;
         }
       }
+    }
+  }
+
+  .resume-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #222831;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
   }
 }
