@@ -1043,25 +1043,39 @@ function App() {
 
         <section class="projects">
           <h2>Projects</h2>
-          <div class="project-card"></div>
-          <div class="project-card"></div>
-        </section>
-
-        {/* <section class="contact">
-          <h2>Contact</h2>
-          <button class="email-btn">Mail Me</button>
-          <div class="social-links">
-            <a href="#" class="social-link">
-              GitHub
-            </a>
-            <a href="#" class="social-link">
-              LinkedIn
-            </a>
-            <a href="#" class="social-link">
-              X
-            </a>
+          <div class="project-card">
+            <div class="project-image">
+              <img />
+            </div>
+            <div class="project-content">
+              <h3>Portfolio Site</h3>
+              <p>Blah blah</p>
+              <div class="tech-stack">
+                <div class="tech-badge">
+                  {/* <svg></svg> */}
+                  <span>HTML</span>
+                </div>
+                <div class="tech-badge">
+                  {/* <svg></svg> */}
+                  <span>CSS</span>
+                </div>
+                <div class="tech-badge">
+                  {/* <svg></svg> */}
+                  <span>SASS</span>
+                </div>
+                <div class="tech-badge">
+                  {/* <svg></svg> */}
+                  <span>JavaScript</span>
+                </div>
+                <div class="tech-badge">
+                  {/* <svg></svg> */}
+                  <span>React</span>
+                </div>
+              </div>
+              <div class="project-link">Check Page</div>
+            </div>
           </div>
-        </section> */}
+        </section>
       </main>
 
       <footer>

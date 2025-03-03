@@ -151,15 +151,6 @@ main {
   }
 }
 
-.projects {
-  .project-card {
-    @include placeholder-block;
-    height: 120px;
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-}
-
 .tech-stack {
   h2 {
     margin-bottom: 1.5rem;
@@ -331,6 +322,91 @@ main {
     &:active {
       transform: translateY(0);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.projects {
+  h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .project-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      height: auto;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+
+      @media (min-width: 768px) {
+        width: 40%;
+        height: auto;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    .project-content {
+      padding: 1.5rem;
+      flex: 1;
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      p {
+        color: #555;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+
+      .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+
+        .tech-badge {
+          display: flex;
+          align-items: center;
+          background-color: #222831;
+          color: white;
+          border-radius: 50px;
+          padding: 0.4rem 0.8rem;
+          font-size: 0.8rem;
+          font-weight: 500;
+
+          svg {
+            margin-right: 5px;
+          }
+        }
+      }
+
+      .project-link {
+      }
     }
   }
 }
