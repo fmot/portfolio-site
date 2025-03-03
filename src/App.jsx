@@ -279,7 +279,7 @@ function App() {
         </section>
 
         <section class="about" id="about">
-          <h2>About</h2>
+          <h2>About Me</h2>
           <p>
             Hi👋 I am a full stack developer with 5 years of experience. My main
             strength is backend field, but I am still expanding my knowledge of
