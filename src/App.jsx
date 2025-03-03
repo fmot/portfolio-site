@@ -51,19 +51,29 @@ function App() {
           <nav className="menu">
             <ul>
               <li>
-                <a href="#home">ABOUT</a>
+                <a href="#about" onClick={toggleMenu}>
+                  ABOUT
+                </a>
               </li>
               <li>
-                <a href="#experience">EXPERIENCE</a>
+                <a href="#experience" onClick={toggleMenu}>
+                  EXPERIENCE
+                </a>
               </li>
               <li>
-                <a href="#skills">SKILLS</a>
+                <a href="#tech-stack" onClick={toggleMenu}>
+                  SKILLS
+                </a>
               </li>
               <li>
-                <a href="#bprojects">PROJECTS</a>
+                <a href="#projects" onClick={toggleMenu}>
+                  PROJECTS
+                </a>
               </li>
               <li>
-                <a href="#contact">CONTACT</a>
+                <a href="#contact" onClick={toggleMenu}>
+                  CONTACT
+                </a>
               </li>
             </ul>
           </nav>
@@ -71,7 +81,7 @@ function App() {
       </header>
 
       <main>
-        <section class="profile">
+        <section class="profile" id="home">
           <h1>FUMIYA OTAKE</h1>
           <p>It is a full stack developer's portfolio site</p>
           <div class="profile-image">
@@ -263,7 +273,16 @@ function App() {
           </div>
         </section>
 
-        <section class="experience">
+        <section class="about" id="about">
+          <h1>ABOUT</h1>
+          <p>
+            Hi👋 I am a full stack developer with 5 years of experience. My main
+            strength is backend field, but I am still expanding my knowledge of
+            other areas every day. Please see my resume for more details.
+          </p>
+        </section>
+
+        <section class="experience" id="experience">
           <h2>Experience</h2>
           <div class="timeline">
             <div class="timeline-item">
@@ -272,6 +291,13 @@ function App() {
                 <h3>Web Application Developer</h3>
                 <p class="period">Apl 2020 - Dec 2024</p>
                 <p class="role">Full Stack</p>
+                <p class="description">
+                  As a full-stack developer using React and Ruby on Rails, I was
+                  responsible for web applications from system design to
+                  implementation. I have experience in all phases of application
+                  development, including RESTful API development, database
+                  design, performance optimization, and development efficiency.
+                </p>
               </div>
             </div>
 
@@ -279,8 +305,12 @@ function App() {
               <div class="timeline-marker"></div>
               <div class="timeline-content">
                 <h3>Intern</h3>
-                <p class="period">Jan 2019 - Mar 2021</p>
-                <p class="role">Back-End</p>
+                <p class="period">Jan 2019 - Mar 2020</p>
+                <p class="role">BackEnd</p>
+                <p class="description">
+                  Gained development experience as a back-end engineering intern
+                  while in college.
+                </p>
               </div>
             </div>
           </div>
@@ -303,7 +333,7 @@ function App() {
           </button>
         </section>
 
-        <section className="tech-stack">
+        <section className="tech-stack" id="tech-stack">
           <h2>My Tech Stack</h2>
           <div className="stack-container">
             <div className="stack-section">
@@ -1041,7 +1071,7 @@ function App() {
           </div>
         </section>
 
-        <section class="projects">
+        <section class="projects" id="projects">
           <h2>Projects</h2>
           <div class="project-card">
             <div class="project-image">
@@ -1078,7 +1108,7 @@ function App() {
         </section>
       </main>
 
-      <footer>
+      <footer id="contact">
         <h2>Contact</h2>
         <a class="email-btn">
           <svg
