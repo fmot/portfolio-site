@@ -419,9 +419,6 @@ footer {
   padding: 5rem;
 
   .email-btn {
-    // padding: 0.75rem 2rem;
-    // margin-bottom: 1.5rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -457,25 +454,47 @@ footer {
 
   .social-links {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 1rem;
+    gap: 2rem;
 
     .social-link {
-      font-size: 0.9rem;
-      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+
+      &:hover {
+        opacity: 0.8;
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
     }
   }
-}
 
-@media screen and (max-width: 320px) {
-  .profile .profile-image {
-    width: 70px;
-    height: 70px;
-  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+    text-align: center;
 
-  .contact .email-btn {
-    width: 90%;
+    .email-btn {
+      margin: 1.5rem 0;
+    }
+
+    .social-links {
+      width: 100%;
+      justify-content: center;
+    }
   }
 }
