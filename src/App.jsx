@@ -51,19 +51,34 @@ function App() {
           <nav className="menu">
             <ul>
               <li>
-                <a href="#home">ABOUT</a>
+                <a href="#home" onClick={toggleMenu}>
+                  HOME
+                </a>
               </li>
               <li>
-                <a href="#experience">EXPERIENCE</a>
+                <a href="#about" onClick={toggleMenu}>
+                  ABOUT
+                </a>
               </li>
               <li>
-                <a href="#skills">SKILLS</a>
+                <a href="#experience" onClick={toggleMenu}>
+                  EXPERIENCE
+                </a>
               </li>
               <li>
-                <a href="#bprojects">PROJECTS</a>
+                <a href="#tech-stack" onClick={toggleMenu}>
+                  SKILLS
+                </a>
               </li>
               <li>
-                <a href="#contact">CONTACT</a>
+                <a href="#projects" onClick={toggleMenu}>
+                  PROJECTS
+                </a>
+              </li>
+              <li>
+                <a href="#contact" onClick={toggleMenu}>
+                  CONTACT
+                </a>
               </li>
             </ul>
           </nav>
@@ -71,7 +86,7 @@ function App() {
       </header>
 
       <main>
-        <section class="profile">
+        <section class="profile" id="home">
           <h1>FUMIYA OTAKE</h1>
           <p>It is a full stack developer's portfolio site</p>
           <div class="profile-image">
@@ -263,7 +278,16 @@ function App() {
           </div>
         </section>
 
-        <section class="experience">
+        <section class="about" id="about">
+          <h2>About</h2>
+          <p>
+            Hi👋 I am a full stack developer with 5 years of experience. My main
+            strength is backend field, but I am still expanding my knowledge of
+            other areas every day. Please see my resume for more details.
+          </p>
+        </section>
+
+        <section class="experience" id="experience">
           <h2>Experience</h2>
           <div class="timeline">
             <div class="timeline-item">
@@ -272,6 +296,13 @@ function App() {
                 <h3>Web Application Developer</h3>
                 <p class="period">Apl 2020 - Dec 2024</p>
                 <p class="role">Full Stack</p>
+                <p class="description">
+                  As a full-stack developer using React and Ruby on Rails, I was
+                  responsible for web applications from system design to
+                  implementation. I have experience in all phases of application
+                  development, including RESTful API development, database
+                  design, performance optimization, and development efficiency.
+                </p>
               </div>
             </div>
 
@@ -279,8 +310,12 @@ function App() {
               <div class="timeline-marker"></div>
               <div class="timeline-content">
                 <h3>Intern</h3>
-                <p class="period">Jan 2019 - Mar 2021</p>
-                <p class="role">Back-End</p>
+                <p class="period">Jan 2019 - Mar 2020</p>
+                <p class="role">BackEnd</p>
+                <p class="description">
+                  Gained development experience as a back-end engineering intern
+                  while in college.
+                </p>
               </div>
             </div>
           </div>
@@ -303,7 +338,7 @@ function App() {
           </button>
         </section>
 
-        <section className="tech-stack">
+        <section className="tech-stack" id="tech-stack">
           <h2>My Tech Stack</h2>
           <div className="stack-container">
             <div className="stack-section">
@@ -1041,44 +1076,57 @@ function App() {
           </div>
         </section>
 
-        <section class="projects">
+        <section class="projects" id="projects">
           <h2>Projects</h2>
           <div class="project-card">
             <div class="project-image">
-              <img />
+              <img src="/portfolio-screenshot.png" alt="portfolio" />
             </div>
             <div class="project-content">
               <h3>Portfolio Site</h3>
-              <p>Blah blah</p>
+              <p>Portfolio describing my experience in software development</p>
               <div class="tech-stack">
                 <div class="tech-badge">
-                  {/* <svg></svg> */}
                   <span>HTML</span>
                 </div>
                 <div class="tech-badge">
-                  {/* <svg></svg> */}
                   <span>CSS</span>
                 </div>
                 <div class="tech-badge">
-                  {/* <svg></svg> */}
                   <span>SASS</span>
                 </div>
                 <div class="tech-badge">
-                  {/* <svg></svg> */}
                   <span>JavaScript</span>
                 </div>
                 <div class="tech-badge">
-                  {/* <svg></svg> */}
                   <span>React</span>
                 </div>
               </div>
-              <div class="project-link">Check Page</div>
+
+              <a class="project-link">
+                <span>See project</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="200"
+                  height="200"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 4h16v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4Zm6 6v4m0 0h4m-4 0l4-4"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
         </section>
       </main>
 
-      <footer>
+      <footer id="contact">
         <h2>Contact</h2>
         <a class="email-btn">
           <svg
@@ -1092,7 +1140,7 @@ function App() {
               d="M105 5h1152q43 0 74 31t31 74v785q0 44-31 74.5t-74 30.5H105q-43 0-74-30.5T0 895V110q0-43 31-74t74-31zm69 157l507 423l507-423H174zm-17 681h1048V285L711 697h-61L157 285v558z"
             />
           </svg>
-          <span> Mail Me</span>
+          <span> Mail me</span>
         </a>
         <div class="social-links">
           <a href="#" class="social-link">

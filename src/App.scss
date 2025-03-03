@@ -26,6 +26,10 @@ $border-color: #333;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: $background-color;
@@ -113,6 +117,7 @@ main {
 
   section {
     padding: 1rem;
+    // padding: 6rem 1rem;
     @include flex-column;
     width: 100%;
     border-bottom: 1px solid rgba(134, 134, 134, 0.1);
@@ -151,7 +156,33 @@ main {
   }
 }
 
+.about {
+  @include flex-column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3rem;
+  padding: 6rem 1rem;
+
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1.25rem;
+    max-width: 50%;
+
+    @media (max-width: 768px) {
+      max-width: 70%;
+    }
+  }
+}
+
 .tech-stack {
+  padding: 6rem 1rem;
+
   h2 {
     margin-bottom: 1.5rem;
     text-align: center;
@@ -233,6 +264,7 @@ main {
 
 .experience {
   align-items: center;
+  padding: 6rem 1rem;
 
   h2 {
     margin-bottom: 1.5rem;
@@ -242,6 +274,8 @@ main {
   }
 
   .timeline {
+    @include flex-column;
+    gap: 4rem;
     padding-left: 1.5rem;
     position: relative;
     margin-bottom: 2rem;
@@ -279,8 +313,9 @@ main {
 
         .company,
         .period,
+        .description,
         .role {
-          font-size: 0.8rem;
+          font-size: 1.25rem;
           margin-bottom: 0.25rem;
         }
 
@@ -327,6 +362,8 @@ main {
 }
 
 .projects {
+  padding: 6rem 1rem;
+
   h2 {
     margin-bottom: 1.5rem;
     text-align: center;
@@ -406,6 +443,37 @@ main {
       }
 
       .project-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: #222831;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 12px 24px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 0 auto;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+
+        &:hover {
+          opacity: 0.8;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        &:active {
+          transform: translateY(0);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
       }
     }
   }
