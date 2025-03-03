@@ -1045,7 +1045,7 @@ function App() {
           <h2>Projects</h2>
           <div class="project-card">
             <div class="project-image">
-              <img />
+              <img src="/portfolio-screenshot.png" alt="portfolio" />
             </div>
             <div class="project-content">
               <h3>Portfolio Site</h3>
@@ -1092,7 +1092,7 @@ function App() {
               d="M105 5h1152q43 0 74 31t31 74v785q0 44-31 74.5t-74 30.5H105q-43 0-74-30.5T0 895V110q0-43 31-74t74-31zm69 157l507 423l507-423H174zm-17 681h1048V285L711 697h-61L157 285v558z"
             />
           </svg>
-          <span> Mail Me</span>
+          <span> Mail me</span>
         </a>
         <div class="social-links">
           <a href="#" class="social-link">
