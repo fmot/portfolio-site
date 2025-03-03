@@ -51,6 +51,11 @@ function App() {
           <nav className="menu">
             <ul>
               <li>
+                <a href="#home" onClick={toggleMenu}>
+                  HOME
+                </a>
+              </li>
+              <li>
                 <a href="#about" onClick={toggleMenu}>
                   ABOUT
                 </a>
@@ -274,7 +279,7 @@ function App() {
         </section>
 
         <section class="about" id="about">
-          <h1>ABOUT</h1>
+          <h2>About</h2>
           <p>
             Hi👋 I am a full stack developer with 5 years of experience. My main
             strength is backend field, but I am still expanding my knowledge of
@@ -1079,30 +1084,43 @@ function App() {
             </div>
             <div class="project-content">
               <h3>Portfolio Site</h3>
-              <p>Blah blah</p>
+              <p>Portfolio describing my experience in software development</p>
               <div class="tech-stack">
                 <div class="tech-badge">
-                  {/* <svg></svg> */}
                   <span>HTML</span>
                 </div>
                 <div class="tech-badge">
-                  {/* <svg></svg> */}
                   <span>CSS</span>
                 </div>
                 <div class="tech-badge">
-                  {/* <svg></svg> */}
                   <span>SASS</span>
                 </div>
                 <div class="tech-badge">
-                  {/* <svg></svg> */}
                   <span>JavaScript</span>
                 </div>
                 <div class="tech-badge">
-                  {/* <svg></svg> */}
                   <span>React</span>
                 </div>
               </div>
-              <div class="project-link">Check Page</div>
+
+              <a class="project-link">
+                <span>See project</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="200"
+                  height="200"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 4h16v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4Zm6 6v4m0 0h4m-4 0l4-4"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
         </section>
